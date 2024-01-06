@@ -30,6 +30,8 @@ class Derived : public Base			// output: 8 bytes
 void main()
 {
 	//Base baseInstance;
+	//baseInstance.doSomething();
+	
 	//cout << sizeof(Derived) << endl;
 	cout << sizeof(Base) << endl;
 }
