@@ -11,16 +11,27 @@ using namespace std;
 class Base
 {
 	int baseIntMember;
+	//void doSomething()			// output: 4 bytes
+	virtual void doSomething()		// output: 16 bytes   , virtual - hidden data
+	{
+		cout << "Base::doSomething()" << endl;
+	}
 };
 
-class Derived : public Base
+class Derived : public Base			// output: 8 bytes
 {
 	int derivedIntMember;
+	void doSomething()
+	{
+		cout << "Derived::doSomething()" << endl;
+	}
 };
 
 void main()
 {
-	cout << sizeof(Derived) << endl;
+	//Base baseInstance;
+	//cout << sizeof(Derived) << endl;
+	cout << sizeof(Base) << endl;
 }
 
 
